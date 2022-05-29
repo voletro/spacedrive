@@ -22,6 +22,7 @@ pub mod encode;
 pub mod file;
 pub mod job;
 pub mod library;
+pub mod native;
 pub mod node;
 #[cfg(target_os = "p2p")]
 pub mod p2p;
@@ -29,7 +30,6 @@ pub mod prisma;
 pub mod sync;
 pub mod sys;
 pub mod util;
-// pub mod native;
 
 // a wrapper around external input with a returning sender channel for core to respond
 #[derive(Debug)]
@@ -291,8 +291,11 @@ impl Node {
 			//   fs::remove_file(Path::new(&self.state.data_path).join("library.db")).unwrap();
 			//   CoreResponse::Success(())
 			// }
-			ClientCommand::IdentifyUniqueFiles { id, path }  => {
-				ctx.spawn_job(Box::new(FileIdentifierJob { location_id: id, path}));
+			ClientCommand::IdentifyUniqueFiles { id, path } => {
+				ctx.spawn_job(Box::new(FileIdentifierJob {
+					location_id: id,
+					path,
+				}));
 				CoreResponse::Success(())
 			}
 		})

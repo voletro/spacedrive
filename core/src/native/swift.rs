@@ -1,4 +1,5 @@
-use crate::library::volumes::Volume;
+// use crate::library::volumes::Volume;
+use crate::sys::volumes::Volume;
 pub use swift_rs::types::{SRObjectArray, SRString};
 
 extern "C" {

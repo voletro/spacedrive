@@ -34,7 +34,7 @@ class Volume: NSObject {
 
 @_cdecl("get_mounts")
 public func getMounts() -> SRObjectArray {
-       let keys: [URLResourceKey] = [
+    let keys: [URLResourceKey] = [
         .volumeNameKey,
         .volumeIsRemovableKey,
         .volumeIsEjectableKey,
@@ -71,6 +71,3 @@ public func getMounts() -> SRObjectArray {
     
     return SRObjectArray(validMounts)
 }
-
-
-

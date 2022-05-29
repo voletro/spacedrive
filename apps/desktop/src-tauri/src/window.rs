@@ -80,14 +80,10 @@ impl<R: Runtime> WindowExt for Window<R> {
 
 	#[cfg(target_os = "macos")]
 	fn fix_shadow(&self) {
-		use cocoa::appkit::NSWindow;
+		// use sdcore::native::methods::recompute_shadow;
 
-		unsafe {
-			let id = self.ns_window().unwrap() as cocoa::base::id;
+		let id = self.ns_window().unwrap() as cocoa::base::id;
 
-			println!("recomputing shadow for window {:?}", id.title());
-
-			id.invalidateShadow();
-		}
+		// recompute_shadow(id);
 	}
 }

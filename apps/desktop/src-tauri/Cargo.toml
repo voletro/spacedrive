@@ -11,7 +11,7 @@ build = "src/build.rs"
 
 [build-dependencies]
 tauri-build = { version = "1.0.0-rc.5", features = [] }
-swift-rs = "0.2.3"
+swift-rs = { version = "0.3.0", features = ["build"] }
 
 [dependencies]
 # Project dependencies

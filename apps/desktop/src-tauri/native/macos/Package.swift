@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "swift-lib",
     platforms: [
-        .macOS(.v11)
+        .macOS(.v11),
     ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
@@ -17,7 +17,6 @@ let package = Package(
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
-        // .package(url: /* package url */, from: "1.0.0"),
         .package(name: "SwiftRs", url: "https://github.com/Brendonovich/swift-rs", from: "0.3.0")
     ],
     targets: [
