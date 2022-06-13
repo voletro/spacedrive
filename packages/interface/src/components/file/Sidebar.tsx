@@ -1,9 +1,8 @@
 import { LockClosedIcon, PhotographIcon } from '@heroicons/react/outline';
-import { CogIcon, EyeOffIcon, PlusIcon } from '@heroicons/react/solid';
 import { useBridgeCommand, useBridgeQuery } from '@sd/client';
 import { Button, Dropdown } from '@sd/ui';
 import clsx from 'clsx';
-import { CirclesFour, Code, Planet } from 'phosphor-react';
+import { CirclesFour, Code, EyeSlash, Gear, Lock, Planet, Plus } from 'phosphor-react';
 import React, { useContext } from 'react';
 import { NavLink, NavLinkProps } from 'react-router-dom';
 
@@ -120,10 +119,10 @@ export const Sidebar: React.FC<SidebarProps> = (props) => {
 				items={[
 					[{ name: clientState?.node_name || '', selected: true }, { name: 'Private Library' }],
 					[
-						{ name: 'Library Settings', icon: CogIcon },
-						{ name: 'Add Library', icon: PlusIcon },
-						{ name: 'Lock', icon: LockClosedIcon },
-						{ name: 'Hide', icon: EyeOffIcon }
+						{ name: 'Library Settings', icon: <Gear /> },
+						{ name: 'Add Library', icon: <Plus /> },
+						{ name: 'Lock', icon: <Lock /> },
+						{ name: 'Hide', icon: <EyeSlash /> }
 					]
 				]}
 			/>
@@ -229,7 +228,7 @@ export const Sidebar: React.FC<SidebarProps> = (props) => {
 								// isActive && '!bg-gray-550'
 							)}
 						>
-							<CogIcon className="w-5 h-5" />
+							<Gear size={20} />
 						</Button>
 					)}
 				</NavLink>

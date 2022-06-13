@@ -374,6 +374,7 @@ importers:
       '@headlessui/react': ^1.6.4
       '@heroicons/react': ^1.0.6
       '@radix-ui/react-context-menu': ^0.1.6
+      '@radix-ui/react-dropdown-menu': ^0.1.6
       '@sd/config': workspace:*
       '@storybook/addon-actions': ^6.5.6
       '@storybook/addon-essentials': ^6.5.6
@@ -405,6 +406,7 @@ importers:
       '@headlessui/react': 1.6.4_ef5jwxihqo6n7gxfmzogljlgcm
       '@heroicons/react': 1.0.6_react@18.1.0
       '@radix-ui/react-context-menu': 0.1.6_ohobp6rpsmerwlq5ipwfh5yigy
+      '@radix-ui/react-dropdown-menu': 0.1.6_ohobp6rpsmerwlq5ipwfh5yigy
       clsx: 1.1.1
       phosphor-react: 1.4.1_react@18.1.0
       postcss: 8.4.14
@@ -14179,6 +14181,7 @@ packages:
   /react-style-singleton/2.2.0_7cpxmzzodpxnolj5zcc5cr63ji:
     resolution: {integrity: sha512-nK7mN92DMYZEu3cQcAhfwE48NpzO5RpxjG4okbSqRRbfal9Pk+fG2RdQXTMp+f6all1hB9LIJSt+j7dCYrU11g==}
     engines: {node: '>=10'}
+    deprecated: wrong managing of dynamic styles
     peerDependencies:
       '@types/react': ^16.8.0 || ^17.0.0 || ^18.0.0
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
