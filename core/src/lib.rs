@@ -15,14 +15,22 @@ use ts_rs::TS;
 
 use crate::encode::ThumbnailJob;
 
-mod encode;
-mod file;
-mod job;
-mod library;
-mod node;
-mod prisma;
-mod sys;
-mod util;
+// init modules
+pub mod crypto;
+pub mod db;
+pub mod encode;
+pub mod file;
+pub mod job;
+pub mod library;
+pub mod node;
+#[cfg(target_os = "p2p")]
+pub mod p2p;
+pub mod prisma;
+// pub mod prisma_crdt;
+pub mod sync;
+pub mod sys;
+pub mod util;
+// pub mod native;
 
 // a wrapper around external input with a returning sender channel for core to respond
 #[derive(Debug)]
