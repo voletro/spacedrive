@@ -8,6 +8,7 @@ import React, { useContext, useEffect } from 'react';
 import { useCountUp } from 'react-countup';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
+import ReactTooltip from 'react-tooltip';
 import create from 'zustand';
 
 import { AppPropsContext } from '../App';
@@ -75,6 +76,7 @@ const StatItem: React.FC<StatItemProps> = (props) => {
 
 	return (
 		<div
+			data-tip="Hello"
 			className={clsx(
 				'flex flex-col flex-shrink-0 w-32 px-4 py-3 duration-75 transform rounded-md cursor-default hover:bg-gray-50 hover:dark:bg-gray-600',
 				!+bytes && 'hidden'
@@ -151,6 +153,7 @@ export const OverviewScreen = () => {
 
 	return (
 		<div className="flex flex-col w-full h-screen overflow-x-hidden custom-scroll page-scroll">
+			<ReactTooltip effect="solid" />
 			<div data-tauri-drag-region className="flex flex-shrink-0 w-full h-5" />
 			{/* PAGE */}
 			<div className="flex flex-col w-full h-screen px-4">
