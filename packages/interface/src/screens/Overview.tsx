@@ -205,7 +205,7 @@ export const OverviewScreen = () => {
 						</Dialog>
 					</div>
 				</div>
-				<div className="flex flex-col pb-4 space-y-4">
+				<div data-tip="JEFF" className="flex flex-col pb-4 space-y-4">
 					<Device
 						name={`James' MacBook Pro`}
 						size="1TB"

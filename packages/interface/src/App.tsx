@@ -14,6 +14,7 @@ import {
 	useLocation,
 	useNavigate
 } from 'react-router-dom';
+import ReactTooltip from 'react-tooltip';
 
 import { Sidebar } from './components/file/Sidebar';
 import { Modal } from './components/layout/Modal';
@@ -80,6 +81,7 @@ function AppLayout() {
 				hasWindowBorder && 'border border-gray-200 dark:border-gray-500'
 			)}
 		>
+			<ReactTooltip />
 			<Sidebar />
 			<div className="flex flex-col w-full min-h-full">
 				{/* <TopBar /> */}

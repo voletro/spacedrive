@@ -50,6 +50,7 @@
 		"react-router-dom": "6.3.0",
 		"react-scrollbars-custom": "^4.0.27",
 		"react-spline": "^1.2.1",
+		"react-tooltip": "^4.2.21",
 		"react-transition-group": "^4.4.2",
 		"react-virtuoso": "^2.12.1",
 		"rooks": "^5.11.2",
