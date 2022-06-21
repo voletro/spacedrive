@@ -2,11 +2,13 @@ import { Transition } from '@headlessui/react';
 import { ShareIcon } from '@heroicons/react/solid';
 import { FilePath, LocationResource } from '@sd/core';
 import { Button, TextArea } from '@sd/ui';
+import clsx from 'clsx';
 import moment from 'moment';
 import { Heart, Link } from 'phosphor-react';
 import React from 'react';
 
 import { default as types } from '../../constants/file-types.json';
+import { DefaultProps } from '../primitive/types';
 import FileThumb from './FileThumb';
 
 interface MetaItemProps {
@@ -29,11 +31,13 @@ const MetaItem = (props: MetaItemProps) => {
 
 const Divider = () => <div className="w-full my-1 h-[1px] bg-gray-100 dark:bg-gray-550" />;
 
-export const Inspector = (props: {
+export interface InspectorProps extends DefaultProps {
 	locationId: number;
 	location?: LocationResource;
 	selectedFile?: FilePath;
-}) => {
+}
+
+export const Inspector: React.FC<InspectorProps> = (props) => {
 	const file_path = props.selectedFile;
 
 	let full_path = `${props.location?.path}/${file_path?.materialized_path}`;
@@ -48,7 +52,12 @@ export const Inspector = (props: {
 			leaveFrom="translate-x-0"
 			leaveTo="translate-x-64"
 		>
-			<div className="top-0 right-0 m-2 border border-gray-100 w-60 dark:border-gray-850 custom-scroll page-scroll">
+			<div
+				className={clsx(
+					'top-0 right-0 m-2 border border-gray-100 w-60 dark:border-gray-850 custom-scroll page-scroll',
+					props.className
+				)}
+			>
 				{!!file_path && (
 					<div className="flex flex-col overflow-x-hidden bg-white rounded-lg select-text dark:bg-gray-600 bg-opacity-70">
 						<div className="flex items-center justify-center w-full h-64 overflow-hidden rounded-t-lg bg-gray-50 dark:bg-gray-900">

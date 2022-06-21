@@ -29,12 +29,13 @@ export const ExplorerScreen: React.FC<{}> = () => {
 	);
 
 	return (
-		<div className="flex flex-col w-full h-full">
-			<TopBar />
-			<div className="relative flex flex-row w-full ">
+		<div className="flex flex-col w-full h-full !bg-[blue]">
+			<TopBar className="!sticky top-0 left-0 right-0" />
+			<div className="relative flex flex-row w-full bg-[green]">
 				<FileList location_id={location_id} path={path} limit={limit} />
 				{currentDir?.contents && (
 					<Inspector
+						className=""
 						location={currentLocation}
 						selectedFile={currentDir.contents[selectedRowIndex]}
 						locationId={location_id}

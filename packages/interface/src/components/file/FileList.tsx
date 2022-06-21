@@ -98,7 +98,7 @@ export const FileList: React.FC<{ location_id: number; path: string; limit: numb
 
 	const Header = () => (
 		<div>
-			<h1 className="pt-20 pl-4 text-xl font-bold ">{currentDir?.directory.name}</h1>
+			<h1 className="pt-10 pl-4 text-xl font-bold ">{currentDir?.directory.name}</h1>
 			<div className="table-head">
 				<div className="flex flex-row p-2 table-head-row">
 					{columns.map((col) => (
@@ -120,7 +120,7 @@ export const FileList: React.FC<{ location_id: number; path: string; limit: numb
 		() => (
 			<div
 				ref={tableContainer}
-				style={{ marginTop: -44 }}
+				// style={{ marginTop: -44 }}
 				className="w-full pl-2 bg-white cursor-default table-container dark:bg-gray-650"
 			>
 				<LocationContext.Provider
@@ -132,7 +132,7 @@ export const FileList: React.FC<{ location_id: number; path: string; limit: numb
 						style={{ height: size.innerHeight ?? 600 }}
 						totalCount={currentDir?.contents.length || 0}
 						itemContent={Row}
-						components={{ Header, Footer: () => <div className="w-full " /> }}
+						components={{ Header, Footer: () => <div className="w-full" /> }}
 						increaseViewportBy={{ top: 400, bottom: 200 }}
 						className="outline-none explorer-scroll"
 					/>
