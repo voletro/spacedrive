@@ -70,6 +70,7 @@
 				"resizable": true,
 				"fullscreen": false,
 				"alwaysOnTop": false,
+				"visible": false,
 				"focus": false,
 				"fileDropEnabled": false,
 				"decorations": true,

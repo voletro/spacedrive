@@ -71,8 +71,6 @@ async fn main() {
 			}
 
 			app.windows().iter().for_each(|(_, window)| {
-				window.hide().unwrap();
-
 				#[cfg(target_os = "windows")]
 				window.set_decorations(true).unwrap();
 
