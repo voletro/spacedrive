@@ -4,4 +4,4 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-prisma-client-rust-cli = { path = "../../../prisma-client-rust/cli" }
+prisma-client-rust-cli = { path = "../../../../Brendonovich/prisma-client-rust/cli" }
